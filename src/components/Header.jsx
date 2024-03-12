@@ -1,12 +1,13 @@
-import { useLocation } from 'react-router-dom';
-import { disablePageScroll, enablePageScroll } from 'scroll-lock';
-import { useState } from 'react';
-
-import { brainwave } from '../assets';
-import { navigation } from '../constants';
-import Button from './Button';
-import MenuSvg from '../assets/svg/MenuSvg';
-import { HamburgerMenu } from './design/Header';
+import { useLocation } from "react-router-dom";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../constants/variants";
+import { brainwave } from "../assets";
+import { navigation } from "../constants";
+import Button from "./Button";
+import MenuSvg from "../assets/svg/MenuSvg";
+import { HamburgerMenu } from "./design/Header";
 
 const Header = () => {
   const pathName = useLocation();
@@ -30,10 +31,15 @@ const Header = () => {
   return (
     <div
       className={`fixed top-0 left-0 z-50 w-full border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
+        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        className="max-w-[1400px] mx-auto flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4"
+      >
         {/* logo */}
         <a href="/" className="block w-[12rem] xl:mr-8">
           <img src={brainwave} width={190} height={40} alt="logo" />
@@ -41,7 +47,7 @@ const Header = () => {
         {/* menu desktop */}
         <nav
           className={`${
-            openNavigation ? 'flex' : 'hidden'
+            openNavigation ? "flex" : "hidden"
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative flex flex-col items-center justify-center m-auto z-2 lg:flex-row">
@@ -51,11 +57,11 @@ const Header = () => {
                 href={item?.url}
                 onClick={handleClick}
                 className={`relative block text-2xl uppercase transition-colors font-code text-n-1 hover:text-color-1 ${
-                  item?.onlyMobile ? 'lg:hidden' : ''
+                  item?.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-4 md:py-6 lg:-mr-0.25 lg:text-[14px] lg:font-semibold ${
                   item?.url === pathName.hash
-                    ? 'z-2 lg:text-n-1'
-                    : 'lg:text-n-1/50'
+                    ? "z-2 lg:text-n-1"
+                    : "lg:text-n-1/50"
                 } leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item?.title}
@@ -98,7 +104,7 @@ const Header = () => {
           <MenuSvg openNavigation={openNavigation} />
         </Button>
         {/*navicon mobile */}
-      </div>
+      </motion.div>
     </div>
   );
 };
