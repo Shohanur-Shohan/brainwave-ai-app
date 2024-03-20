@@ -140,15 +140,20 @@ export const collabContent = [
   {
     id: "0",
     title: "Seamless Integration",
-    text: collabText,
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    open: true,
   },
   {
     id: "1",
     title: "Smart Automation",
+    text: "Streamline your workflow with intelligent automation features.",
+    // open: false,
   },
   {
     id: "2",
     title: "Top-notch Security",
+    text: "Protect your data with industry-leading security measures.",
+    // open: false,
   },
 ];
 

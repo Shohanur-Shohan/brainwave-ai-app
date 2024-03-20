@@ -18,7 +18,7 @@ const Benefits = () => {
 
       <div className="grid w-full gap-[2.5rem] lg:gap-[1rem] xl:gap-[2.5rem] items-center justify-between grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 mt-[60px] md:mt-[100px]">
         {benefits.map((item) => {
-          console.log(item);
+          // console.log(item);
           return (
             // card
             <motion.div
@@ -33,9 +33,7 @@ const Benefits = () => {
               <div className="relative flex flex-col z-2 p-[1.8rem] lg:p-[1.5rem] xl:p-[2.4rem] overflow-hidden">
                 {/* content */}
                 <div className="">
-                  <h5 className="mb-5 leading-[3rem] pr-[25%] h3">
-                    {item?.title}
-                  </h5>
+                  <h5 className="mb-5 leading-[3rem] h5">{item?.title}</h5>
                   <p className="mb-6 lg:mb-[40px]  body-2 text-n-3 line-clamp-3">
                     {item?.text}
                   </p>
