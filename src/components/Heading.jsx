@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../constants/variants";
 
-const Heading = ({ className, title }) => {
+const Heading = ({ className, title, text }) => {
   return (
     <div
       className={`${className} max-w-[28rem] md:max-w-[36rem] xl:max-w-[40rem] mx-auto text-center`}
@@ -16,6 +16,16 @@ const Heading = ({ className, title }) => {
         >
           {title}
         </motion.h2>
+      )}
+      {text && (
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+        >
+          <p className="mt-4 body-2 text-n-4">{text}</p>
+        </motion.div>
       )}
     </div>
   );

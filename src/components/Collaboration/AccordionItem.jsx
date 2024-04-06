@@ -7,7 +7,7 @@ const AccordionItem = ({ header, text }) => {
     setActive(!active);
   };
   return (
-    <div className="mb-[1rem]">
+    <div className="">
       <button
         className={`items-center flex w-full text-left`}
         onClick={() => handleToggle()}
@@ -27,9 +27,7 @@ const AccordionItem = ({ header, text }) => {
       {/* ${
           active ? "block" : "hidden"
         } */}
-      <div
-        className={`duration-200 ease-in-out  ${active ? "block" : "hidden"}`}
-      >
+      <div className={`${active ? "block" : "hidden"}`}>
         <p className="py-3 text-base leading-relaxed text-n-4">{text}</p>
       </div>
     </div>

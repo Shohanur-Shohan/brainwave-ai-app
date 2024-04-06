@@ -84,17 +84,26 @@ export const notificationImages = [notification4, notification3, notification2];
 export const companyLogos = [brand1, brand2, brand3, brand4, brand5];
 
 export const brainwaveServices = [
-  "Photo generating",
-  "Photo enhance",
-  "Seamless Integration",
+  {
+    title: "Photo generating",
+    text: "Instantly create customized photos for any purpose.",
+  },
+  {
+    title: "Photo Enhance",
+    text: "Elevate your images with advanced enhancement techniques.",
+  },
+  {
+    title: "Seamless Integration",
+    text: "Effortlessly integrate our services into your workflow.",
+  },
 ];
 
 export const brainwaveServicesIcons = [
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
+  { img: recording03, delay: 0.8 },
+  { img: recording01, delay: 1 },
+  { img: disc02, delay: 1.2 },
+  { img: chromecast, delay: 1.4 },
+  { img: sliders04, delay: 1.6 },
 ];
 
 export const roadmap = [

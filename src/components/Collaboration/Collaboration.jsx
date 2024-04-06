@@ -22,7 +22,7 @@ const Collaboration = () => {
       id="collaboration"
       className="max-w-[1400px] relative mx-auto px-5 lg:px-7.5 xl:px-10"
     >
-      <div className="grid w-full grid-cols-12 pt-[150px] sm:pt-[100px] pb-[100px] items-center">
+      <div className="grid w-full grid-cols-12 pt-[0px] sm:pt-[40px] md:pt-[60px] pb-[100px] items-center">
         {/* left */}
         <div className="col-span-12 md:col-span-6 mb-[40px] md:mb-0">
           <div className="max-w-[25rem]">
@@ -42,11 +42,9 @@ const Collaboration = () => {
             >
               {collabContent.map(item => {
                 return (
-                  <AccordionItem
-                    key={item.id}
-                    header={item.title}
-                    text={item?.text}
-                  />
+                  <li className="py-2 list-none" key={item?.id}>
+                    <AccordionItem header={item.title} text={item?.text} />
+                  </li>
                 );
               })}
             </motion.div>

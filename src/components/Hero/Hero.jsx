@@ -19,7 +19,7 @@ const Hero = () => {
       className="pt-[10rem] md:pt-[12rem] -mt-[5rem] mb-[60px] sm:mb-[100px]"
     >
       <div ref={parallexRef} className="container relative">
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6.5rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[5rem]">
           <motion.h1
             variants={fadeIn("up", 0.4)}
             initial="hidden"
