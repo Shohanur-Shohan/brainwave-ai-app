@@ -17,12 +17,29 @@ const Benefits = () => {
       />
 
       <div className="grid w-full gap-[2.5rem] lg:gap-[1rem] xl:gap-[2.5rem] items-center justify-between grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 mt-[60px] md:mt-[100px]">
-        {benefits.map((item) => {
+        {benefits.map((item, index) => {
           // console.log(item);
+          // console.log(item?.backgroundUrl);
+          const delay =
+            index === 0
+              ? 0.4
+              : index === 1
+              ? 0.5
+              : index === 2
+              ? 0.6
+              : index === 3
+              ? 0.7
+              : index === 4
+              ? 0.8
+              : index === 5
+              ? 0.9
+              : index === 6
+              ? 1
+              : 0.2;
           return (
             // card
             <motion.div
-              variants={fadeIn("up", 0.4)}
+              variants={fadeIn("up", delay)}
               initial="hidden"
               whileInView={"show"}
               className="col-span-1 sm:col-span-2 lg:col-span-1 block relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-w-[24rem] mx-auto"

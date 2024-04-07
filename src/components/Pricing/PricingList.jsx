@@ -8,7 +8,7 @@ const PricingList = () => {
   return (
     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-[1rem]">
       {pricing.map((item, index) => {
-        console.log(index);
+        // console.log(index);
         return (
           <motion.div
             variants={fadeIn(
