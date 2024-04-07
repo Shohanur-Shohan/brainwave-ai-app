@@ -1,14 +1,24 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../constants/variants";
+import Tagline from "./Tagline";
 
-const Heading = ({ className, title, text }) => {
+const Heading = ({ className, title, text, tag }) => {
   return (
     <div
       className={`${className} max-w-[28rem] md:max-w-[36rem] xl:max-w-[40rem] mx-auto text-center`}
     >
+      {tag && (
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+        >
+          <Tagline className={"mb-4 justify-center"}>{tag}</Tagline>
+        </motion.div>
+      )}
       {title && (
         <motion.h2
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", tag ? 0.4 : 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
