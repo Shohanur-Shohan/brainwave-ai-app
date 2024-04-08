@@ -24,18 +24,18 @@ const Benefits = () => {
             index === 0
               ? 0.4
               : index === 1
-              ? 0.5
-              : index === 2
               ? 0.6
-              : index === 3
-              ? 0.7
-              : index === 4
+              : index === 2
               ? 0.8
-              : index === 5
-              ? 0.9
-              : index === 6
+              : index === 3
               ? 1
-              : 0.2;
+              : index === 4
+              ? 1.2
+              : index === 5
+              ? 1.4
+              : index === 6
+              ? 1.6
+              : 0.6;
           return (
             // card
             <motion.div
