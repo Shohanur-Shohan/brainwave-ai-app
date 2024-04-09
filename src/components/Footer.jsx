@@ -1,6 +1,6 @@
-import { socials } from "../constants";
-import { motion } from "framer-motion";
-import { fadeIn } from "../constants/variants";
+import { socials } from "../constants"
+import { motion } from "framer-motion"
+import { fadeIn } from "../constants/variants"
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
           whileInView={"show"}
           className="flex justify-center gap-5 sm:justify-end"
         >
-          {socials.map(item => (
+          {socials.map((item) => (
             <a
               key={item.id}
               href={item.url}
@@ -35,7 +35,7 @@ const Footer = () => {
         </motion.ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

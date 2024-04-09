@@ -13,11 +13,7 @@ const AccordionItem = ({ header, text }) => {
         onClick={() => handleToggle()}
       >
         <div className="flex items-center justify-center h-10 mr-4 rounded-lg bg-primary/5 text-primary">
-          <img
-            src="/src/assets/check.svg"
-            className="w-[24px] h-[24px]"
-            alt="icon"
-          />
+          <img src="/check.svg" className="w-[24px] h-[24px]" alt="icon" />
         </div>
 
         <div className="w-full">
